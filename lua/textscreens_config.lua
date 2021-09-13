@@ -82,6 +82,13 @@ addFont("Screens_Akbar", {
 	antialias = true
 })
 
+-- akbar
+addFont("Inter", {
+	font = "Inter",
+	weight = 500,
+	antialias = true
+})
+
 
 if CLIENT then
 
