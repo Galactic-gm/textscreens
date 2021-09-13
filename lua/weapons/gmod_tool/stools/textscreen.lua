@@ -349,7 +349,7 @@ function TOOL.BuildCPanel(CPanel)
 		rainbowCheckboxes[i]:SetConVar("textscreen_rainbow" .. i)
 		rainbowCheckboxes[i]:SetTooltip("Enable for rainbow text")
 		rainbowCheckboxes[i]:SetValue(GetConVar("textscreen_rainbow" .. i))
-		
+
 		if not (IsValid(localPly) and localPly:CanUseTextscreenRainbow()) then
 			rainbowCheckboxes[i]:SetTall(0)
 			rainbowCheckboxes[i]:SetVisible(false)

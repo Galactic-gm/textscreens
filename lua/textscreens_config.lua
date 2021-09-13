@@ -2,7 +2,7 @@
 local meta = FindMetaTable("Player")
 
 function meta:CanUseTextscreenRainbow()
-	return self:IsUserGroup("vip") or self:IsUserGroup("vip+")
+	return true
 end
 
 TextScreens.AllowedTools = {

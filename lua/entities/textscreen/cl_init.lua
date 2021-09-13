@@ -65,7 +65,7 @@ local function Draw3D2D(ang, pos, camangle, data)
 	for i = 1, data[LEN] do
 		if not data[i] or not data[i][TEXT] then continue end
 
-		cam.Start3D2D(pos, camangle, data[i][CAMSIZE] )
+		cam.Start3D2D(pos, camangle, data[i][CAMSIZE])
 			render.PushFilterMin(TEXFILTER.ANISOTROPIC)
 			-- Font
 			surface.SetFont(data[i][FONT])
@@ -75,7 +75,7 @@ local function Draw3D2D(ang, pos, camangle, data)
 			if data[i][RAINBOW] ~= 0 then
 				local chars = data[i][TEXT]
 				for j = 1, #chars do
-					surface.SetTextColor(HSVToColor((CurTime() * 60 + (j * 5)) % 360, 1, 1))
+					surface.SetTextColor(Galactic.LerpColor(j / #chars + math.sin(CurTime()), Galactic.Colors.From, Galactic.Colors.To))
 					surface.DrawText(data[i][TEXT][j])
 				end
 			else
